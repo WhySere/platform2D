@@ -122,8 +122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 474543499}
   - component: {fileID: 474543498}
-  - component: {fileID: 474543497}
   - component: {fileID: 474543500}
+  - component: {fileID: 474543497}
   m_Layer: 0
   m_Name: Nemico
   m_TagString: Untagged
@@ -139,10 +139,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 474543496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c8c18111175f9478afe52c5ff01c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 748189541369b6f4096bbb436ec0b1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 102890376}
   danno: 1
 --- !u!61 &474543498
 BoxCollider2D:

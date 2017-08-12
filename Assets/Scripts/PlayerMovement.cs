@@ -94,13 +94,16 @@ public class PlayerMovement : MonoBehaviour
         isFacing = !sp.flipX;
     }
 
-    void OnTriggerEnter(Collider Nemico)
+    void OnTriggerEnter2D(Collider2D Nemico)
     {
-        vita = vita - Nemico.GetComponent<Hit>().danno;
+        vita = vita - Nemico.GetComponent<Enemy>().danno;
+
+        Debug.Log("aaaa");
 
         if (vita <= 0)
         {
             transform.position = new Vector2(0f, 0f);
+            vita = 2;
         }
     }
 }
