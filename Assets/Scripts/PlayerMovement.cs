@@ -12,10 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
 
     // Statistiche del Player
-    public int vita;
+    public int salute;
     private int speed = 15;
     public float jumpForce;
     private int doubleJump;
+    private int money;
 
     //Groundcheck
     public bool isGrounded;
@@ -94,16 +95,26 @@ public class PlayerMovement : MonoBehaviour
         isFacing = !sp.flipX;
     }
 
-    void OnTriggerEnter2D(Collider2D Nemico)
+    // Gestione delle collisioni con le cose
+
+
+    //Gestione della vita del player
+
+    void OnTriggerEnter2D(Collider2D thing)
     {
-        vita = vita - Nemico.GetComponent<Enemy>().danno;
-
-        Debug.Log("aaaa");
-
-        if (vita <= 0)
+        if (thing is Enemy)
         {
-            transform.position = new Vector2(0f, 0f);
-            vita = 2;
+            salute = salute - thing.GetComponent<Enemy>().damage;
+
+            if (salute <= 0)
+            {
+                transform.position = new Vector2(0f, 0f);
+                salute = 2;
+            }
         }
-    }
+        else if (thing is Collectible)
+        {
+            money = money + thing.GetComponent<Collectible>().value;
+        }
+    }        
 }

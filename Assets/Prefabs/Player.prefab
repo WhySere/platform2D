@@ -34,10 +34,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4626064290864516}
-  - component: {fileID: 114978452971192748}
   - component: {fileID: 50501101830114912}
   - component: {fileID: 212776250382465928}
   - component: {fileID: 58453545005777348}
+  - component: {fileID: 114978452971192748}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -86,7 +86,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -122,7 +122,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967039
-  jumpForce: 4
+  vita: 2
+  jumpForce: 12
   isGrounded: 0
 --- !u!212 &212776250382465928
 SpriteRenderer:
@@ -156,12 +157,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e849199e499707845ab29c22a250e08b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5d8cc06b3b4a6fc408e5e49cbf0aba6d, type: 3}
+  m_Color: {r: 0.034482475, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.11, y: 0.11}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

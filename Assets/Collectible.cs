@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Collectible : MonoBehaviour
 {
-    public int damage;
+    public int value;
 }
